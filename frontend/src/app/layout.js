@@ -19,9 +19,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} bg-black text-white selection:bg-purple-500`}>
+        <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-black to-black" />
+        <main className="max-w-2xl mx-auto min-h-screen p-8">
+          {children}
+        </main>
       </body>
     </html>
   );
 }
+
